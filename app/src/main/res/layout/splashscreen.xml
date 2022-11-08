@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6666FF">
+    <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/insurance"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="250dp">
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insurance Agent"
+        android:textColor="@color/black"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="45dp"
+        android:textStyle="bold"></TextView>
+</RelativeLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "407892327005",
+    "project_id": "insurance-agent-7e5ad",
+    "storage_bucket": "insurance-agent-7e5ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407892327005:android:e486f067ae3e052ade6bb4",
+        "android_client_info": {
+          "package_name": "com.example.insuranceagent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407892327005-n0tffog21ss95bh2gqsp0sphpva89rbh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_w6A4XL34FolqdQqI3c7c0mSfNkYQWPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407892327005-n0tffog21ss95bh2gqsp0sphpva89rbh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DBD7D7">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/adduser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD USER"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:padding="10dp"
+        >
+    </EditText>
+
+    <EditText
+        android:id="@+id/Mobileno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mobile no."
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:padding="10dp"
+        android:inputType="number">
+    </EditText>
+    <TextView
+        android:id="@+id/dateofbirth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date of Birth :-"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:padding="10dp"
+        android:textSize="20dp">
+    </TextView>
+    <Button
+        android:id="@+id/Dateofbirth"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:text="Oct 1 2022"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        style="?android:spinnerStyle"
+        android:onClick="openDatePicker">
+    </Button>
+    <TextView
+        android:id="@+id/anniversery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Anniversery :-"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:padding="10dp"
+        android:textSize="20dp">
+    </TextView>
+    <Button
+        android:id="@+id/Anniversery"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:text="Oct 1 2022"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        style="?android:spinnerStyle"
+        android:onClick="openDatePicker1">
+    </Button>
+    <EditText
+        android:id="@+id/Address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:padding="10dp">
+    </EditText>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Button
+        android:id="@+id/IDProof"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID Proof"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:padding="10dp"
+        android:text="ID Proof"
+        android:textColor="@color/black"
+        android:backgroundTint="#DBD7D7">
+    </Button>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:visibility="gone"></ProgressBar>
+    <Button
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF8000"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:text="Add User">
+    </Button>
+    </LinearLayout>
+</ScrollView>
