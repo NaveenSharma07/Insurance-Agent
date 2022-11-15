@@ -99,7 +99,6 @@ public class LoginActivity extends AppCompatActivity {
                 this.finish();
             }
     }
-
     }
 
 

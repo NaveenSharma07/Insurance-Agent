@@ -3,15 +3,15 @@ package com.example.insuranceagent;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class UserHelperclass {
-    String Name , Mobileno , Dateofbirth,Anniversary,Address,IDProof;
+    String Name , Mobileno , Dateofbirth,Anniversary,Address;
 
-    public UserHelperclass(String name, String Mobileno, String Dateofbirth, String Anniversary,String address, String IDProof) {
+    public UserHelperclass(String name, String Mobileno, String Dateofbirth, String Anniversary,String address) {
         this.Name = name;
         this.Mobileno = Mobileno;
         this.Dateofbirth = Dateofbirth;
         this.Anniversary = Anniversary;
         this.Address = address;
-        this.IDProof = IDProof;
+
     }
 
     public String getName() {
@@ -52,14 +52,6 @@ public class UserHelperclass {
 
     public void setAddress(String address) {
         this.Address = address;
-    }
-
-    public String getIDProof() {
-        return IDProof;
-    }
-
-    public void setIDProof(String IDProof) {
-        this.IDProof = IDProof;
     }
 
     }

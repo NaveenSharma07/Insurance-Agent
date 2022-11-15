@@ -104,7 +104,8 @@
                 android:layout_height="80dp"
                 android:layout_marginLeft="14dp"
                 android:layout_marginTop="6dp"
-                android:src="@drawable/date_icon_"></ImageView>
+                android:src="@drawable/date_icon_">
+            </ImageView>
             <TextView
                 android:id="@+id/rlbydate"
                 android:layout_width="wrap_content"

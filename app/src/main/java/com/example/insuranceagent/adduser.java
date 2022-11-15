@@ -2,12 +2,16 @@ package com.example.insuranceagent;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,15 +21,23 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.util.Calendar;
 
 public class adduser extends AppCompatActivity {
@@ -36,6 +48,7 @@ public class adduser extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference reference;
     StorageReference storageReference;
+    private Uri imageuri;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,14 +79,13 @@ public class adduser extends AppCompatActivity {
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!Name.getText().toString().trim().isEmpty()&&!Mobileno.getText().toString().trim().isEmpty()&&!Dateofbirth.getText().toString().trim().isEmpty()&&!Anniversary.getText().toString().trim().isEmpty()&&!Address.getText().toString().trim().isEmpty()&&!IDProof.getText().toString().trim().isEmpty()){
+                if(!Name.getText().toString().trim().isEmpty()&&!Mobileno.getText().toString().trim().isEmpty()&&!Dateofbirth.getText().toString().trim().isEmpty()&&!Anniversary.getText().toString().trim().isEmpty()&&!Address.getText().toString().trim().isEmpty()){
                     String name = Name.getText().toString();
                     String mobileno = Mobileno.getText().toString();
                     String dateofbirth = Dateofbirth.getText().toString();
                     String anniversary = Anniversary.getText().toString();
                     String address = Address.getText().toString();
-                    String idProof = IDProof.getText().toString();
-                    UserHelperclass helperclass = new UserHelperclass(name, mobileno, dateofbirth, anniversary, address, idProof);
+                    UserHelperclass helperclass = new UserHelperclass(name, mobileno, dateofbirth, anniversary, address);
                     reference.child("Add User").push().setValue(helperclass).addOnCompleteListener(task ->
                     {
                         if (task.isSuccessful()) {
@@ -88,10 +100,7 @@ public class adduser extends AppCompatActivity {
                 else{
                     Name.setError("Can't be Empty");
                     Mobileno.setError("Can't be Empty");
-                    Dateofbirth.setError("Can't be Empty");
-                    Anniversary.setError("Can't be Empty");
                     Address.setError("Can't be Empty");
-                    IDProof.setError("Can't be Empty");
                 }
             }
         });
@@ -113,7 +122,40 @@ public class adduser extends AppCompatActivity {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent,REQUEST_CODE);
     }
-    
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == Activity.RESULT_OK){
+            if(resultCode == REQUEST_CODE){
+               onCaptureImageResult(data);
+            }
+        }
+    }
+
+    private void onCaptureImageResult(Intent data){
+        Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        thumbnail.compress(Bitmap.CompressFormat.PNG,90,bytes);
+        byte bb[] = bytes.toByteArray();
+        String file = Base64.encodeToString(bb, Base64.DEFAULT);
+        uploadToFirebase(bb);
+    }
+
+    private void uploadToFirebase(byte[] bb){
+        StorageReference sr = storageReference.child("myimages/a.jpg");
+        sr.putBytes(bb).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                Toast.makeText(adduser.this,"Successfully Uploaded",Toast.LENGTH_SHORT).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(adduser.this,""+"Failed To Upload",Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
     private String getTodayDate() {
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);

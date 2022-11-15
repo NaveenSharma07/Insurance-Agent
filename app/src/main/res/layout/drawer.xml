@@ -17,6 +17,11 @@
             android:background="@color/design_default_color_primary"
             app:title="@string/app_name"
             app:titleTextColor="@color/white">
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/person_icon">-->
+<!--            </ImageView>-->
         </androidx.appcompat.widget.Toolbar>
         <RelativeLayout
             android:layout_width="match_parent"

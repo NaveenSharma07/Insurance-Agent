@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,28 +16,63 @@
         android:theme="@style/Theme.InsuranceAgent"
         tools:targetApi="31">
         <activity
+            android:name=".rm_by_date"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".rm_by_company"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".rm_by_category"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".rm_by_user"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".splashscreen"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"/>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".otp" />
-        <activity android:name=".addpolicy"
-            android:parentActivityName=".drawer"/>
-        <activity android:name=".adduser"
-            android:parentActivityName=".drawer"/>
-        <activity android:name=".RenewalReminder"
-            android:parentActivityName=".drawer"/>
-        <activity android:name=".drawer"
-                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            ></activity>
-        <activity android:name=".AssignPolicy"
-            android:parentActivityName=".drawer"/>
-        <activity android:name=".addcategory"
-            android:parentActivityName=".drawer"/>
+        <activity
+            android:name=".addpolicy"
+            android:parentActivityName=".drawer" />
+        <activity
+            android:name=".adduser"
+            android:parentActivityName=".drawer" />
+        <activity
+            android:name=".RenewalReminder"
+            android:parentActivityName=".drawer" />
+        <activity
+            android:name=".drawer"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".AssignPolicy"
+            android:parentActivityName=".drawer" />
+        <activity
+            android:name=".addcategory"
+            android:parentActivityName=".drawer" />
     </application>
+
 </manifest>
