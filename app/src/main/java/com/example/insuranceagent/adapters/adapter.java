@@ -1,7 +1,6 @@
-package com.example.insuranceagent;
+package com.example.insuranceagent.adapters;
 
 import android.content.Context;
-import android.service.autofill.UserData;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +9,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.insuranceagent.R;
+import com.example.insuranceagent.userdata;
+
 import java.util.ArrayList;
-import java.util.jar.Attributes;
 
 public class adapter extends RecyclerView.Adapter<adapter.MyViewHolder> {
 
