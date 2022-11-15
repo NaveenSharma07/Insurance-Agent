@@ -29,13 +29,13 @@ public class adapter extends RecyclerView.Adapter<adapter.MyViewHolder> {
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(context).inflate(R.layout.itemview,parent,false);
         return new MyViewHolder(v);
-
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
        userdata user = list.get(position);
        holder.name.setText(user.getName());
+       holder.date.setText(user.getDateofbirth());
     }
 
     @Override
@@ -44,10 +44,11 @@ public class adapter extends RecyclerView.Adapter<adapter.MyViewHolder> {
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView name;
+        TextView name,date;
         public MyViewHolder(View itemView){
             super(itemView);
             name = itemView.findViewById(R.id.name);
+            date = itemView.findViewById(R.id.date);
         }
     }
 }
