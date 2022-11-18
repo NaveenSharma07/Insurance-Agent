@@ -16,29 +16,41 @@
         android:theme="@style/Theme.InsuranceAgent"
         tools:targetApi="31">
         <activity
+            android:name=".Payment_Status"
+            android:exported="false"
+            android:parentActivityName=".drawer" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".rm_by_date"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".RenewalReminder">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".rm_by_company"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".RenewalReminder">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".rm_by_category"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".RenewalReminder">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".rm_by_user"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".RenewalReminder">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

@@ -27,6 +27,7 @@
             android:background="@color/white">
 
             <ImageView
+                android:id="@+id/rlbyuser"
                 android:layout_width="81dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="14dp"
@@ -34,7 +35,6 @@
                 android:src="@drawable/usersicon"></ImageView>
 
             <TextView
-                android:id="@+id/rlbyuser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="90dp"
@@ -52,13 +52,13 @@
             android:layout_marginTop="190dp"
             android:background="@color/white">
             <ImageView
+                android:id="@+id/rlbycategory"
                 android:layout_width="81dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="14dp"
                 android:layout_marginTop="6dp"
                 android:src="@drawable/categoryicon"></ImageView>
             <TextView
-                android:id="@+id/rlbycategory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="90dp"
@@ -76,13 +76,13 @@
             android:layout_marginTop="345dp"
             android:background="@color/white">
             <ImageView
+                android:id="@+id/rlbycompany"
                 android:layout_width="81dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="14dp"
                 android:layout_marginTop="6dp"
                 android:src="@drawable/company"></ImageView>
             <TextView
-                android:id="@+id/rlbycompany"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="90dp"
@@ -100,6 +100,7 @@
             android:layout_marginTop="345dp"
             android:background="@color/white">
             <ImageView
+                android:id="@+id/rlbydate"
                 android:layout_width="81dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="14dp"
@@ -107,7 +108,6 @@
                 android:src="@drawable/date_icon_">
             </ImageView>
             <TextView
-                android:id="@+id/rlbydate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="90dp"

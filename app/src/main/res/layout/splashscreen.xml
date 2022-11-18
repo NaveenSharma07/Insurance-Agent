@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Insurance Agent"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_marginTop="500dp"
         android:layout_marginLeft="20dp"
         android:textSize="45dp"

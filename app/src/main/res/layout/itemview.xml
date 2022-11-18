@@ -29,12 +29,13 @@
             </TextView>
 
             <TextView
-                android:id="@+id/name"
+                android:id="@+id/user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:layout_toEndOf="@+id/username"
-                android:textSize="22sp">
+                android:textSize="22sp"
+                android:layout_marginTop="2sp">
             </TextView>
 
         </RelativeLayout>
@@ -48,21 +49,32 @@
                 android:id="@+id/userdate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="  Date : "
+                android:text="  Date of expiry : "
                 android:textColor="@color/black"
                 android:textSize="26sp"
                 android:textStyle="bold">
             </TextView>
 
             <TextView
-                android:id="@+id/date"
+                android:id="@+id/dateofexpiry"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:layout_toEndOf="@+id/userdate"
-                android:textSize="22sp">
+                android:textSize="22sp"
+                android:layout_marginTop="2sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/dateofissue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_toEndOf="@+id/userdate"
+                android:textSize="22sp"
+                android:layout_marginTop="2sp"
+                android:visibility="gone">
             </TextView>
         </RelativeLayout>
-
     </LinearLayout>
 </androidx.cardview.widget.CardView>

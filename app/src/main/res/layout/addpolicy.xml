@@ -58,18 +58,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Company"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="35dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:padding="10dp"
-        >
+        android:padding="10dp">
     </EditText>
     <EditText
         android:id="@+id/duration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Duration"
-        android:layout_marginTop="50dp"
+        android:inputType="number"
+        android:maxLength="2"
+        android:hint="Duration (in Year)"
+        android:layout_marginTop="35dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:padding="10dp">
@@ -79,11 +80,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Amount"
-        android:layout_marginTop="50dp"
+        android:inputType="number"
+        android:text="₹"
+        android:layout_marginTop="35dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:padding="10dp"
-        >
+        android:padding="10dp">
     </EditText>
     <Button
         android:id="@+id/add"
@@ -91,7 +93,7 @@
         android:layout_height="wrap_content"
         android:text="add policy"
         android:backgroundTint="#FF8000"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="35dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp">
     </Button>

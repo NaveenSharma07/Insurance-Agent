@@ -22,7 +22,7 @@ public class drawer extends AppCompatActivity implements View.OnClickListener{
     Toolbar toolbar;
     DrawerLayout drawer;
     ActionBarDrawerToggle toggle;
-    TextView addPolicy , adduser , RenewalReminder , assignpolicy , addcategory ,rladduser,rladdpolicyy, rlrenewalreminder, rladdcategory, rlassignpolicy;
+    TextView addPolicy ,adduser , RenewalReminder , assignpolicy , addcategory ,rladduser,rladdpolicyy, rlrenewalreminder, rladdcategory, rlassignpolicy, rlpaymentstatus;
     private ImageSlider imageslider;
     @Override
     protected void onCreate( Bundle savedInstanceState) {
@@ -38,11 +38,13 @@ public class drawer extends AppCompatActivity implements View.OnClickListener{
         rladdcategory = findViewById(R.id.rladdcategory);
         rlassignpolicy = findViewById(R.id.rlassignpolicy);
         imageslider = findViewById(R.id.viewPager);
+        rlpaymentstatus = findViewById(R.id.rlpaymentstatus);
         rladdcategory.setOnClickListener(this);
         rladduser.setOnClickListener(this);
         rlrenewalreminder.setOnClickListener(this);
         rladdpolicyy.setOnClickListener(this);
         rlassignpolicy.setOnClickListener(this);
+        rlpaymentstatus.setOnClickListener(this);
 
         ArrayList<SlideModel> slideModels = new ArrayList<>();
         slideModels.add(new SlideModel("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fcompany-policies&psig=AOvVaw2BNO6T_IYpr10Sly4fR9oV&ust=1667286731827000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJjeiZ31ifsCFQAAAAAdAAAAABAJ", ScaleTypes.FIT));
@@ -108,6 +110,9 @@ public class drawer extends AppCompatActivity implements View.OnClickListener{
                 Intent i6 = new Intent(drawer.this, AssignPolicy.class);
                 startActivity(i6);
                 break;
+            case R.id.rlpaymentstatus:
+                Intent i7 = new Intent(drawer.this,Payment_Status.class);
+                startActivity(i7);
         }
         if(drawer.isDrawerOpen(GravityCompat.START)){
             drawer.closeDrawer(Gravity.LEFT);

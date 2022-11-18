@@ -75,6 +75,50 @@
             android:layout_marginRight="22dp">
         </Button>
     </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date of issue :-"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="40dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="20dp">
+        </TextView>
+        <Button
+            android:id="@+id/dateofissue"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="Oct 1 2022"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            style="?android:spinnerStyle"
+            android:onClick="openDatePicker">
+        </Button>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date of expiry :-"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="40dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="20dp">
+        </TextView>
+        <Button
+            android:id="@+id/dateofexpiryy"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="Oct 1 2022"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            style="?android:spinnerStyle"
+            android:onClick="openDatePicker1">
+        </Button>
         <Button
             android:id="@+id/add"
             android:layout_width="match_parent"
@@ -82,9 +126,8 @@
             android:text="assign policy"
             android:backgroundTint="#FF8000"
             android:layout_marginTop="50dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            >
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="40dp">
         </Button>
     </LinearLayout>
 </ScrollView>

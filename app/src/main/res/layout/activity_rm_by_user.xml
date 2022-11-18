@@ -8,9 +8,18 @@
     tools:context=".rm_by_user"
     android:background="#DBD7D7">
 
+<!--    <androidx.appcompat.widget.SearchView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/search_view"-->
+<!--        app:queryHint="Search by">-->
+<!--    </androidx.appcompat.widget.SearchView>-->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/userList"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
     </androidx.recyclerview.widget.RecyclerView>
+
 </RelativeLayout>

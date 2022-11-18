@@ -5,13 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class RenewalReminder extends AppCompatActivity {
-    TextView rlbyuser,rlbycategory,rlbydate,rlbycompany;
+    ImageView rlbyuser,rlbycategory,rlbydate,rlbycompany;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
